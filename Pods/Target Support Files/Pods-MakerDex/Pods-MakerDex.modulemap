@@ -1,0 +1,6 @@
+framework module Pods_MakerDex {
+  umbrella header "Pods-MakerDex-umbrella.h"
+
+  export *
+  module * { export * }
+}

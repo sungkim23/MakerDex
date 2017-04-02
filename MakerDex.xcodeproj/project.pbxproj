@@ -12,6 +12,7 @@
 		14242D6D1E906D910068F9B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14242D6B1E906D910068F9B3 /* Main.storyboard */; };
 		14242D6F1E906D910068F9B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14242D6E1E906D910068F9B3 /* Assets.xcassets */; };
 		14242D721E906D910068F9B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14242D701E906D910068F9B3 /* LaunchScreen.storyboard */; };
+		639EF80C99EEAA2A60520AB0 /* Pods_MakerDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45AF66690591854CA353B6CC /* Pods_MakerDex.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		14242D6E1E906D910068F9B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14242D711E906D910068F9B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14242D731E906D910068F9B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45AF66690591854CA353B6CC /* Pods_MakerDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakerDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49ED900A2270488935FF6B33 /* Pods-MakerDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakerDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-MakerDex/Pods-MakerDex.release.xcconfig"; sourceTree = "<group>"; };
+		8918F7A2EC099E4622EDCB5F /* Pods-MakerDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakerDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MakerDex/Pods-MakerDex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				639EF80C99EEAA2A60520AB0 /* Pods_MakerDex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				14242D661E906D910068F9B3 /* MakerDex */,
 				14242D651E906D910068F9B3 /* Products */,
+				B30D4076FAD6D02E2078CB75 /* Pods */,
+				3AF9B95755FE11D8BD0EDC46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = MakerDex;
 			sourceTree = "<group>";
 		};
+		3AF9B95755FE11D8BD0EDC46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45AF66690591854CA353B6CC /* Pods_MakerDex.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B30D4076FAD6D02E2078CB75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8918F7A2EC099E4622EDCB5F /* Pods-MakerDex.debug.xcconfig */,
+				49ED900A2270488935FF6B33 /* Pods-MakerDex.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14242D761E906D910068F9B3 /* Build configuration list for PBXNativeTarget "MakerDex" */;
 			buildPhases = (
+				1D8CD20012E17DBBD2EB189A /* [CP] Check Pods Manifest.lock */,
 				14242D601E906D910068F9B3 /* Sources */,
 				14242D611E906D910068F9B3 /* Frameworks */,
 				14242D621E906D910068F9B3 /* Resources */,
+				90AFFCF5FBC6C92DA3F48E3C /* [CP] Embed Pods Frameworks */,
+				BFA3249BEACAE09544E4D6A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D8CD20012E17DBBD2EB189A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90AFFCF5FBC6C92DA3F48E3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MakerDex/Pods-MakerDex-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFA3249BEACAE09544E4D6A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MakerDex/Pods-MakerDex-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14242D601E906D910068F9B3 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		14242D771E906D910068F9B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8918F7A2EC099E4622EDCB5F /* Pods-MakerDex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4HALU46U6T;
@@ -272,6 +348,7 @@
 		};
 		14242D781E906D910068F9B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49ED900A2270488935FF6B33 /* Pods-MakerDex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4HALU46U6T;
