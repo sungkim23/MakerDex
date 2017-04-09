@@ -16,6 +16,7 @@
 		145603B71E99984E00B052C6 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 145603B61E99984E00B052C6 /* pokemon.csv */; };
 		145603B91E99987100B052C6 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 145603B81E99987100B052C6 /* music.mp3 */; };
 		639EF80C99EEAA2A60520AB0 /* Pods_MakerDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45AF66690591854CA353B6CC /* Pods_MakerDex.framework */; };
+		E0ED15BB1E99A5F700B9EA09 /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ED15BA1E99A5F700B9EA09 /* PokemonCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		45AF66690591854CA353B6CC /* Pods_MakerDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakerDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49ED900A2270488935FF6B33 /* Pods-MakerDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakerDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-MakerDex/Pods-MakerDex.release.xcconfig"; sourceTree = "<group>"; };
 		8918F7A2EC099E4622EDCB5F /* Pods-MakerDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakerDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MakerDex/Pods-MakerDex.debug.xcconfig"; sourceTree = "<group>"; };
+		E0ED15BA1E99A5F700B9EA09 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				14242D731E906D910068F9B3 /* Info.plist */,
 				145603B21E99983000B052C6 /* Helpers */,
 				145603B31E99983000B052C6 /* Resources */,
+				E0ED15BA1E99A5F700B9EA09 /* PokemonCollectionViewCell.swift */,
 			);
 			path = MakerDex;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			files = (
 				145603B51E99983D00B052C6 /* csv.swift in Sources */,
 				14242D6A1E906D910068F9B3 /* ViewController.swift in Sources */,
+				E0ED15BB1E99A5F700B9EA09 /* PokemonCollectionViewCell.swift in Sources */,
 				14242D681E906D910068F9B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
