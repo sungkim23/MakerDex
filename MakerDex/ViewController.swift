@@ -18,6 +18,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print ("esto es un test")
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
