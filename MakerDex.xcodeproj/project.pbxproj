@@ -151,7 +151,6 @@
 				TargetAttributes = {
 					14242D631E906D910068F9B3 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 4HALU46U6T;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -369,12 +368,14 @@
 			baseConfigurationReference = 8918F7A2EC099E4622EDCB5F /* Pods-MakerDex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4HALU46U6T;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MakerDex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.sungkim.MakerDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,12 +384,14 @@
 			baseConfigurationReference = 49ED900A2270488935FF6B33 /* Pods-MakerDex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4HALU46U6T;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MakerDex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.sungkim.MakerDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
