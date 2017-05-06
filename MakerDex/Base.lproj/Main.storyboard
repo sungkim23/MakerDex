@@ -21,13 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="L8U-j5-ze9">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="8WO-1Y-dNQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ABR-S9-tX1">
                                 <rect key="frame" x="0.0" y="108" width="375" height="559"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="s1A-er-VbW">
                                     <size key="itemSize" width="100" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -42,21 +41,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NEr-ZO-CMm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="NEr-ZO-CMm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="71l-FZ-R3F"/>
-                                                        <constraint firstAttribute="height" constant="100" id="eAG-g6-4Qa"/>
+                                                        <constraint firstAttribute="height" constant="90" id="eAG-g6-4Qa"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bulbasaur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghp-d0-naN">
-                                                    <rect key="frame" x="0.0" y="100" width="100" height="20"/>
+                                                    <rect key="frame" x="0.0" y="90" width="100" height="30"/>
+                                                    <color key="backgroundColor" red="1" green="0.027450980390000001" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.98431372549019602" green="0.96862745098039216" blue="1" alpha="0.69994419642857142" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="ghp-d0-naN" firstAttribute="leading" secondItem="nuQ-0R-lvc" secondAttribute="leading" id="33r-JS-VXt"/>
                                             <constraint firstItem="ghp-d0-naN" firstAttribute="top" secondItem="NEr-ZO-CMm" secondAttribute="bottom" id="5OG-Fk-VTh"/>
@@ -66,6 +67,10 @@
                                             <constraint firstAttribute="bottom" secondItem="ghp-d0-naN" secondAttribute="bottom" id="hbM-79-GHe"/>
                                             <constraint firstAttribute="trailing" secondItem="ghp-d0-naN" secondAttribute="trailing" id="ieh-UQ-TtS"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="pokemonImageView" destination="NEr-ZO-CMm" id="q7Z-yT-OQf"/>
+                                            <outlet property="pokemonName" destination="ghp-d0-naN" id="pB8-dg-uuV"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -73,6 +78,15 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Dkc-0H-XVL"/>
                                 </connections>
                             </collectionView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="L8U-j5-ze9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eO7-Od-K2a"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -81,13 +95,20 @@
                             <constraint firstItem="ABR-S9-tX1" firstAttribute="top" secondItem="L8U-j5-ze9" secondAttribute="bottom" id="LFY-LA-dqt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ABR-S9-tX1" secondAttribute="bottom" id="SbV-hH-RRa"/>
                             <constraint firstItem="ABR-S9-tX1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="U2z-VW-5mK"/>
+                            <constraint firstAttribute="trailing" secondItem="8WO-1Y-dNQ" secondAttribute="trailing" id="U64-oV-bzP"/>
                             <constraint firstAttribute="trailing" secondItem="L8U-j5-ze9" secondAttribute="trailing" id="Y84-6Z-3gb"/>
+                            <constraint firstItem="8WO-1Y-dNQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Z2O-VF-V7a"/>
                             <constraint firstItem="L8U-j5-ze9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="b6y-Hr-Cv8"/>
+                            <constraint firstItem="8WO-1Y-dNQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e20-k0-4dW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8WO-1Y-dNQ" secondAttribute="bottom" id="fTF-KV-BRd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pokemon" id="Msm-yP-U6d">
                         <barButtonItem key="rightBarButtonItem" image="music" id="dNf-fd-9il">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="PlayPauseMusic:" destination="BYZ-38-t0r" id="BvA-yg-9fn"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -104,7 +125,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KX9-OR-rlE" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sgr-fM-qh8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sgr-fM-qh8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -119,6 +140,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="96" height="96"/>
+        <image name="bg" width="1920" height="1200"/>
         <image name="music" width="22" height="22"/>
     </resources>
 </document>

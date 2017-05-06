@@ -10,4 +10,15 @@ import UIKit
 
 class PokemonCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var pokemonImageView: UIImageView!
+    @IBOutlet weak var pokemonName: UILabel!
+    
+    var pokemon: Pokemon!
+    
+    func configureCell(pokemon: Pokemon){
+        self.pokemon = pokemon
+        
+        pokemonName.text = self.pokemon.name.capitalized
+        pokemonImageView.image = UIImage(named: "\(String(describing: self.pokemon.pokedexId))")
+    }
 }

@@ -16,6 +16,7 @@
 		145603B71E99984E00B052C6 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 145603B61E99984E00B052C6 /* pokemon.csv */; };
 		145603B91E99987100B052C6 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 145603B81E99987100B052C6 /* music.mp3 */; };
 		145603BB1E99A5EC00B052C6 /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145603BA1E99A5EC00B052C6 /* PokemonCollectionViewCell.swift */; };
+		14B525D91EAC0BF2003C4793 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B525D81EAC0BF2003C4793 /* Pokemon.swift */; };
 		639EF80C99EEAA2A60520AB0 /* Pods_MakerDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45AF66690591854CA353B6CC /* Pods_MakerDex.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		145603B61E99984E00B052C6 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		145603B81E99987100B052C6 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		145603BA1E99A5EC00B052C6 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
+		14B525D81EAC0BF2003C4793 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		45AF66690591854CA353B6CC /* Pods_MakerDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakerDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49ED900A2270488935FF6B33 /* Pods-MakerDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakerDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-MakerDex/Pods-MakerDex.release.xcconfig"; sourceTree = "<group>"; };
 		8918F7A2EC099E4622EDCB5F /* Pods-MakerDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakerDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MakerDex/Pods-MakerDex.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,14 +72,15 @@
 			isa = PBXGroup;
 			children = (
 				14242D671E906D910068F9B3 /* AppDelegate.swift */,
+				14B525D81EAC0BF2003C4793 /* Pokemon.swift */,
 				14242D691E906D910068F9B3 /* ViewController.swift */,
+				145603BA1E99A5EC00B052C6 /* PokemonCollectionViewCell.swift */,
 				14242D6B1E906D910068F9B3 /* Main.storyboard */,
 				14242D6E1E906D910068F9B3 /* Assets.xcassets */,
 				14242D701E906D910068F9B3 /* LaunchScreen.storyboard */,
 				14242D731E906D910068F9B3 /* Info.plist */,
 				145603B21E99983000B052C6 /* Helpers */,
 				145603B31E99983000B052C6 /* Resources */,
-				145603BA1E99A5EC00B052C6 /* PokemonCollectionViewCell.swift */,
 			);
 			path = MakerDex;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B525D91EAC0BF2003C4793 /* Pokemon.swift in Sources */,
 				145603B51E99983D00B052C6 /* csv.swift in Sources */,
 				14242D6A1E906D910068F9B3 /* ViewController.swift in Sources */,
 				145603BB1E99A5EC00B052C6 /* PokemonCollectionViewCell.swift in Sources */,
