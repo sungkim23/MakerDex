@@ -107,11 +107,12 @@ class Pokemon {
         _pokemonUrl = "\(URL_BASE)\(URL_POKEMON)\(self._pokedexId!)/"
     }
     
-    func downloadPokemonDetails (completed: @escaping DownloadComplete){
+    func downloadPokemonDetails (completed: @escaping DownloadComplete) {
         
         let pokemonUrl = URL(string: self._pokemonUrl)!
         
         Alamofire.request(pokemonUrl).responseJSON { response in
+            print(response)
             
             if let dict = response.result.value as? Dictionary<String, AnyObject>{
                 

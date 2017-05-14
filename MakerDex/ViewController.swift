@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     func initAudio() {
         let path = Bundle.main.path(forResource: "music", ofType: "mp3")!
         
-        do{
+        do {
             musicPlayer = try AVAudioPlayer(contentsOf: NSURL(string: path)! as URL)
             musicPlayer.prepareToPlay()
             musicPlayer.numberOfLoops = -1
@@ -72,6 +72,17 @@ class ViewController: UIViewController {
             musicPlayer.stop()
         } else {
             musicPlayer.play()
+        }
+    }
+    
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToPokemonDetail" {
+            if let detailsVC = segue.destination as? PokemonDetailViewController{
+                if let poke = sender as? Pokemon{
+                    detailsVC.pokemon = poke
+                }
+            }
         }
     }
 }
@@ -91,8 +102,23 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+    
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pokemonCollectionViewCell", for: indexPath) as? PokemonCollectionViewCell
+    
+        let poke: Pokemon!
+        
+        if inSearchMode {
+            poke = filteredPokemon[indexPath.row]
+        } else {
+            poke = pokemon[indexPath.row]
+        }
+
+        cell?.configureCell(pokemon: poke)
+        return cell!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let poke: Pokemon!
         
         if inSearchMode {
@@ -101,12 +127,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
             poke = pokemon[indexPath.row]
         }
         
-        cell?.configureCell(pokemon: poke)
-        return cell!
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "goToPokemonDetail", sender: Any?.self)
+        self.performSegue(withIdentifier: "goToPokemonDetail", sender: poke)
     }
 }
 
